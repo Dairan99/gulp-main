@@ -1,0 +1,72 @@
+.current-promotions {
+    display: block;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        text-align: center;
+        padding: 0 0 50px 0;
+    }
+
+    &__wrapper-slide {
+        display: flex;
+        gap: 26px;
+        margin: 0 0 40px 0;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 670px;
+        background-color: $color-dark-blue;
+        border-radius: 30px;
+        padding: 50px 60px;
+        overflow: hidden;
+    }
+
+    &__item-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-text {
+        width: 100%;
+        max-width: 450px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: $color-white;
+        padding: 0 0 50px 0;
+        z-index: 5;
+    }
+
+    &__button {
+        width: 100%;
+        max-width: 219px;
+        padding: 18px 30px;
+        border-radius: 5px;
+        color: $color-white;
+        background-color: $color-orange;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 42px;
+        bottom: -57px;
+    }
+
+    &__wrapper-swiper {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+}

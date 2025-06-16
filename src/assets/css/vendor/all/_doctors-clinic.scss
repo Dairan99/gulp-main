@@ -1,0 +1,102 @@
+.doctors-clinic {
+    background-color: $color-gray;
+    display: block;
+
+    &__list {
+        display: flex;
+        gap: 26px;
+    }
+
+    &__title {
+        margin: 0 0 50px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 5px;
+        background-color: $color-white;
+        border: 1px solid transparent;
+        transition: all 0.3s ease;
+        margin: 0 0 40px 0;
+        
+        &:hover {
+            border: 1px solid $color-orange;
+
+            .doctors-clinic__link {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__wrapper-img {
+        position: relative;
+        max-height: 320px;
+        margin: 0 0 20px 0;
+    }
+
+    &__img {
+        overflow: hidden;
+        margin: 0 0 20px 0;
+        border-radius: 5px;
+    }
+
+    &__link {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        max-width: 50px;
+        padding: 25px;
+        border-radius: 50%;
+        background-color: $color-white;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-orange;
+    }
+
+    &__wrapper-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 54px 30px;
+    }
+
+    &__title-name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        color: $color-dark-blue;
+    }
+
+    &__title-job {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-dark-blue;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-black-gray;
+    }
+
+    &__wrapper-swiper {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+}

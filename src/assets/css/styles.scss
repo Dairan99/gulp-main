@@ -1,0 +1,39 @@
+// global
+@import 'vendor/_reset';
+@import 'vendor/_normalize';
+@import 'vendor/_vars';
+@import 'vendor/_fonts';
+@import 'vendor/_base';
+@import 'vendor/_swiperCustom';
+@import 'vendor/_animation';
+
+
+// header
+@import 'vendor/popups/_popups.scss';
+@import 'vendor/popups/_popups-1.scss';
+@import 'vendor/all/_header';
+
+//blocks
+@import 'vendor/all/_intro';
+@import 'vendor/all/_direction-treatment';
+@import 'vendor/all/_current-promotions';
+@import 'vendor/all/_advantage-clinic';
+@import 'vendor/all/_price-list';
+@import 'vendor/all/_about-company';
+@import 'vendor/all/_alredy-helped';
+@import 'vendor/all/_quality-service';
+@import 'vendor/all/_service';
+@import 'vendor/all/_doctors-clinic';
+@import 'vendor/all/_license';
+@import 'vendor/all/_modern-narcology';
+@import 'vendor/all/_useful-information';
+@import 'vendor/all/_reviews';
+@import 'vendor/all/_grade-reviews';
+@import 'vendor/all/_questions-asked';
+@import 'vendor/all/_support';
+@import 'vendor/all/_contacts-map';
+
+//footer
+@import 'vendor/all/_footer';
+
+

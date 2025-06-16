@@ -1,0 +1,61 @@
+.alredy-helped {
+    display: block;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 100%;
+        color: $color-dark-blue;
+    }
+
+    &__list {
+        display: flex;
+        gap: 26px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-shrink: 0;
+        padding: 30px;
+        background-color: $color-green;
+        border-radius: 5px;
+        width:100%;
+        max-width: 439px;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        gap: 25px;
+    }
+
+    &__number {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-white;
+        width:100%;
+        max-width: 104px;
+    }
+
+    &__button {
+        margin: 0 auto;
+        width:100%;
+        max-width: 291px;
+        padding: 18px 30px;
+    }
+}

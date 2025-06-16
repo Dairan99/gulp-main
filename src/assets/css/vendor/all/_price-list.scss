@@ -1,0 +1,156 @@
+.price-list {
+    display: block;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        margin: 0 0 50px 0;
+        text-align: center;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 15px;
+        margin: 0 0 30px 0;
+    }
+
+    &__button {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        border-radius: 5px;
+        color: $color-dark-gray;
+        padding: 16px 48px;
+        background-color: $color-gray;
+        border: 1px solid $color-light-gray;
+    }
+
+    &__column-btn {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-dark-blue;
+    }
+
+    &__button-orange {
+        background-color: $color-orange;
+        color: $color-white;
+        padding: 16px 48px;
+        border-radius: 5px;
+    }
+
+    &__table {
+        border-collapse: separate;
+        border-spacing: 0 20px;
+        margin: 0 0 80px 0;
+    }
+
+    &__row {
+        margin: 0 0 20px 0;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            background-color: $color-gray;
+        }
+    }
+
+    &__column {
+        padding: 16px 82px 16px 30px;
+    }
+
+    &__column-title {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        padding: 16px 82px 16px 30px;
+    }
+
+    &__cards {
+        display: flex;
+        gap: 26px;
+    }
+
+    &__card-left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 786px;
+        padding: 60px 70px;
+        background-color: $color-orange;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    &__card-title {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 48px;
+        color: $color-white;
+        margin: 0 0 20px 0;
+        z-index: 10;
+    }
+
+    &__card-text {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-white;
+        margin: 0 0 88px;
+        width: 100%;
+        max-width: 363px;
+        z-index: 10;
+    }
+
+    &__card-text-politic {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        width: 100%;
+        max-width: 405px;
+        color: $color-beige;
+        z-index: 10;
+    }
+
+    &__card-icon {
+        position: absolute;
+        right: 36px;
+        top: 101px;
+    }
+
+    &__card-right {
+        background-color: $color-dark-blue;
+        width: 100%;
+        max-width: 554px;
+        padding: 73px 79px;
+        border-radius: 30px;
+    }
+
+    &__card-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px 30px;
+        height: 56px;
+        background-color: $color-white;
+        color: $color-dark-gray;
+        border-bottom: none;
+        line-height: 100%;
+
+        &::placeholder {
+            color: $color-dark-gray;
+        }
+    }
+}

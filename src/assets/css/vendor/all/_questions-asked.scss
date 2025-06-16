@@ -1,0 +1,116 @@
+.questions-asked {
+    display: block;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 26px;
+    }
+
+    &__title {
+        margin: 0 0 50px 0;
+    }
+
+    &__wrapper-accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 670px;
+        border-radius: 5px;
+        padding: 30px;
+        border: 1px solid $color-extra-light-gray;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border: 1px solid $color-orange;
+
+            .questions-asked__button::before,
+            .questions-asked__button::after {
+                background-color: $color-orange;
+            }
+        }
+
+    }
+
+    &__item.accordion--active {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        background-color: $color-orange;
+
+        .questions-asked__text {
+            color: $color-white;
+        }
+
+        .questions-asked__button::before {
+            background-color: $color-white;
+        }
+
+        .questions-asked__button::after {
+            transform: rotate(90deg);
+            top: 3px;
+            left: -2px;
+            background-color: $color-white;
+        }
+    }
+
+    &__accordion {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 670px;
+        border-radius: 5px;
+        padding: 30px;
+        border: 1px solid $color-extra-light-gray;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 504px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-dark-blue;
+    }
+
+    &__button {
+        position: relative;
+        transition: all 0.3s ease;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            border-radius: 3px;
+            content: "";
+            width: 35px;
+            height: 3px;
+            background-color: $color-dark-blue;
+            transition: all 0.3s ease;
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            border-radius: 3px;
+            content: "";
+            width: 3px;
+            height: 35px;
+            background-color: $color-dark-blue;
+            transition: all 0.3s ease;
+        }
+
+    }
+}

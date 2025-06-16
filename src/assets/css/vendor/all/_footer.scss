@@ -1,0 +1,324 @@
+.footer {
+    padding: 80px 0 60px 0;
+    background-color: $color-dark-blue;
+    display: block;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        gap: 26px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        width: 100%;
+        max-width: 438px;
+        box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.1);
+        padding: 50px 50px 55px;
+        border-radius: 30px;
+    }
+
+    &__wrapper {
+        position: relative;
+        background-color: $color-green;
+        border-radius: 30px;
+        width: 100%;
+        max-width: 160px;
+        height: 160px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text {
+        color: $color-black-gray;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__card-wrapper {
+        background-color: $color-black-blue;
+        width: 100%;
+        padding: 60px 79px 50px 79px;
+        border-radius: 30px;
+    }
+
+    &__card-form {
+        display: flex;
+        gap: 10px;
+        margin: 0 0 30px 0;
+    }
+
+    &__custom-input {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 396px;
+        border-radius: 5px;
+        padding: 20px 30px;
+        height: 56px;
+        background-color: $color-white;
+        color: $color-dark-gray;
+        border-bottom: none;
+        line-height: 100%;
+
+        &::placeholder {
+            color: $color-dark-gray;
+        }
+    }
+
+    &__button-orange {
+        width: 100%;
+        max-width: 396px;
+        background-color: $color-orange;
+        color: $color-white;
+        padding: 16px 48px;
+        border-radius: 5px;
+    }
+
+    &__text-questions {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-white;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    &__middle {
+        display: flex;
+        padding: 0 0 50px 0;
+        border-bottom: 1px solid $color-blue-border;
+    }
+
+    &__middle-left-link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__middle-logo {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 100px 0 0;
+    }
+
+    &__middle-left-text {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        max-width: 67px;
+        width: 100%;
+        margin: 0 30px 0 0;
+        color: $color-white;
+    }
+
+    &__middle-left-icon {
+        margin: 0 10px 0 0;
+    }
+
+    &__wrapper-tel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__tel {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 70px 0 0;
+    }
+
+    &__city-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    &__city {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__chart {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__social-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__email {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__social-item {
+        max-height: 30px;
+        line-height: normal;
+    }
+
+    &__payment {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 477px;
+        margin: 0 106px 0 0;
+    }
+
+    &__payment-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__payment-list {
+        display: flex;
+        gap: 10px 30px;
+        flex-wrap: wrap;
+    }
+
+    &__payment-item {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        max-width: 139px;
+        width: 100%;
+    }
+
+    &__payment-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 42px;
+        height: 42px;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+    }
+
+    &__payment-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__payment-choice {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__payment-button {
+        width: 100%;
+        max-width: 144px;
+        padding: 13px;
+        border: 1px solid $color-orange;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+        background-color: transparent;
+    }
+
+    &__confidentiality {
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__confidentiality-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__bottom {
+        display: flex;
+        gap: 126px;
+    }
+
+    &__bottom-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__bottom-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__bottom-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__bottom-item {
+        line-height: 100%;
+    }
+
+    &__bottom-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+    }
+}
