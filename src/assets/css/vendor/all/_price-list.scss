@@ -34,6 +34,7 @@
     }
 
     &__button {
+        position: relative;
         font-weight: 700;
         font-size: 17px;
         line-height: 100%;
@@ -42,6 +43,43 @@
         padding: 16px 48px;
         background-color: $color-gray;
         border: 1px solid $color-light-gray;
+
+        @media (max-width: 768px) {
+            text-align: left;
+            background-color: $color-very-green;
+            color: $color-white;
+
+            
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 93%;
+                transform: translate(-50%, -50%);
+                display: block;
+                border-radius: 3px;
+                content: "";
+                width: 35px;
+                height: 3px;
+                background-color: $color-white;
+                transition: all 0.3s ease;
+            }
+    
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 93%;
+                transform: translate(-50%, -50%);
+                display: block;
+                border-radius: 3px;
+                content: "";
+                width: 3px;
+                height: 35px;
+                background-color: $color-white;
+                transition: all 0.3s ease;
+            }
+        }
+
+        
     }
 
     &__column-btn {
@@ -54,6 +92,7 @@
             font-weight: 400;
             color: $color-orange;
             font-size: 17px;
+            padding: 0 0 0 20px;
         }
 
         @media (max-width: 360px) {
@@ -92,7 +131,9 @@
         @media (max-width: 768px) {
             display: flex;
             flex-wrap: wrap;
+            padding: 10px 0 10px 0;
             margin: 0;
+            border: 1px solid $color-light-gray;
 
             &:nth-child(even) {
                 background-color: $color-white;
@@ -110,7 +151,7 @@
         padding: 16px 82px 16px 30px;
 
         @media (max-width: 768px) {
-            padding: 0;
+            padding: 10px 0 0 20px;
             width: 100%;
 
             &:nth-child(1) {
