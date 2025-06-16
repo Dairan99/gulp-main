@@ -3,19 +3,37 @@
 
 // about
 const aboutSwiper = new Swiper(".aboutSwiper", {
-    slidesPerView: 1.08,
+    slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
         nextEl: ".about-treatment__swiper-button-next",
         prevEl: ".about-treatment__swiper-button-prev",
     },
     pagination: {
-        el: ".about__swiper-pagination",
+        el: ".about-treatment__swiper-pagination",
         clickable: true,
     },
-
     breakpoints: {
-        768: {
+        600: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    },
+});
+
+const aboutClinickSwiper = new Swiper(".aboutClinickSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".about-company__swiper-button-next",
+        prevEl: ".about-company__swiper-button-prev",
+    },
+    pagination: {
+        el: ".about-company__swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        600: {
             slidesPerView: 1,
             spaceBetween: 10,
         },
@@ -106,28 +124,10 @@ const licensySwiper = new Swiper(".licenseSwiper", {
     },
 });
 
-const aboutCompanySwiper = new Swiper(".aboutSwiper", {
-    slidesPerView: 1.08,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".about-company__swiper-button-next",
-        prevEl: ".about-company__swiper-button-prev",
-    },
-    pagination: {
-        el: ".about-company__swiper-pagination",
-        clickable: true,
-    },
 
-    breakpoints: {
-        768: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-    },
-});
 
 const stocksSwiper = new Swiper(".stocksSwiper", {
-    slidesPerView: 1.08,
+    slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
         nextEl: ".current-promotions__swiper-button-next",
@@ -139,8 +139,12 @@ const stocksSwiper = new Swiper(".stocksSwiper", {
     },
 
     breakpoints: {
-        768: {
+        1000: {
             slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 1.5,
             spaceBetween: 10,
         },
     },

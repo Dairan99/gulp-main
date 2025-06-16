@@ -6,9 +6,16 @@
         flex-direction: column;
     }
 
+    &__wrapper-acardion {
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     &__title {
         font-weight: 500;
-        font-size: 42px;
         line-height: 100%;
         color: $color-dark-blue;
         margin: 0 0 50px 0;
@@ -19,6 +26,11 @@
         display: flex;
         gap: 15px;
         margin: 0 0 30px 0;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            display: contents;
+        }
     }
 
     &__button {
@@ -37,6 +49,18 @@
         font-size: 17px;
         line-height: 100%;
         color: $color-dark-blue;
+
+        @media (max-width: 768px) {
+            font-weight: 400;
+            color: $color-orange;
+            font-size: 17px;
+        }
+
+        @media (max-width: 360px) {
+            font-weight: 400;
+            color: $color-orange;
+            font-size: 14px;
+        }
     }
 
     &__button-orange {
@@ -50,19 +74,59 @@
         border-collapse: separate;
         border-spacing: 0 20px;
         margin: 0 0 80px 0;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            border-spacing: 0;
+            margin: 0;
+        }
     }
 
     &__row {
         margin: 0 0 20px 0;
 
-        &:nth-child(2),
-        &:nth-child(4) {
+        &:nth-child(even) {
             background-color: $color-gray;
         }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+
+            &:nth-child(even) {
+                background-color: $color-white;
+            }
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+
+        
     }
 
     &__column {
         padding: 16px 82px 16px 30px;
+
+        @media (max-width: 768px) {
+            padding: 0;
+            width: 100%;
+
+            &:nth-child(1) {
+                max-width: 60%;
+            }
+
+            &:nth-child(2) {
+                max-width: 40%;
+                font-weight: 500;
+            }
+
+            &:nth-child(3) {
+                max-width: 100%;
+                padding: 0 0 20px 0;
+            }
+        }
     }
 
     &__column-title {
@@ -70,11 +134,23 @@
         font-size: 17px;
         line-height: 100%;
         padding: 16px 82px 16px 30px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__cards {
         display: flex;
         gap: 26px;
+
+        @media (max-width: 1000px) {
+            border-radius: 30px;
+            padding: 30px;
+            flex-direction: column;
+            background-color: $color-dark-blue;
+            gap: 0;
+        }
     }
 
     &__card-left {
@@ -87,6 +163,10 @@
         background-color: $color-orange;
         border-radius: 30px;
         overflow: hidden;
+
+        @media (max-width: 1000px) {
+            display: contents;
+        }
     }
 
     &__card-title {
@@ -96,6 +176,14 @@
         color: $color-white;
         margin: 0 0 20px 0;
         z-index: 10;
+
+        @media (max-width: 1000px) {
+            line-height: 100%;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            order: -3;
+            text-align: center;
+        }
     }
 
     &__card-text {
@@ -107,6 +195,14 @@
         width: 100%;
         max-width: 363px;
         z-index: 10;
+
+        @media (max-width: 1000px) {
+            font-size: 15px;
+            margin: 0 0 20px 0;
+            order: -2;
+            max-width: 100%;
+            text-align: center;
+        }
     }
 
     &__card-text-politic {
@@ -117,6 +213,13 @@
         max-width: 405px;
         color: $color-beige;
         z-index: 10;
+
+        @media (max-width: 1000px) {
+            max-width: 100%;
+            text-align: center;
+            margin: 0;
+            color: $color-light-gray;
+        }
     }
 
     &__card-icon {
@@ -131,12 +234,21 @@
         max-width: 554px;
         padding: 73px 79px;
         border-radius: 30px;
+
+        @media (max-width: 1000px) {
+            display: contents;
+        }
     }
 
     &__card-form {
         display: flex;
         flex-direction: column;
         gap: 15px;
+
+        @media (max-width: 1000px) {
+            margin: 0 0 20px 0;
+            order: -1;
+        }
     }
 
     &__input {

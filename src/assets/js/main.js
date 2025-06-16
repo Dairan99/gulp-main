@@ -341,6 +341,40 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 	/*  end tab */
 
+    /* new tabs */
+    const tabs = document.querySelectorAll('.tabs');
+    for (let i = 0; i < tabs.length; i++) {
+        const tabBtns = tabs[i].querySelectorAll('.tab-btn');
+        const tabContents = tabs[i].querySelectorAll('.tab-content');
+        for (let i = 0; i < tabBtns.length; i++) {
+            tabBtns[i].style.order = 2 * i + 1;
+        }
+        for (let i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.order = 2 * i + 2;
+        }
+        if (tabBtns.length > 0) {
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].addEventListener('click', ()=> {
+                    if (!tabBtns[i].classList.contains('active')) {
+                        tabContents.forEach(elem => {
+                            elem.classList.remove('active');
+                        })
+                        tabBtns.forEach(elem => {
+                            elem.classList.remove('active');
+                        })
+                        tabBtns[i].classList.add('active');
+                        tabContents[i].classList.add('active');
+                    }
+                    quantityElem();
+                })
+            }
+        }
+        if (tabBtns.length > 0) {
+            tabBtns[0].click();
+        }
+    }
+    /* end new tabs */
+
 
     /*   scrollTop  */
 	const buttonsUp = document.querySelectorAll('.is-scroll-up')
