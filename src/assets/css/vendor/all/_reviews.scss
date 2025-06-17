@@ -12,14 +12,17 @@
 
     &__list {
         display: flex;
-        gap: 26px;
+        align-items: flex-start;
+
+        @media (max-width: 1100px) {
+            margin: 0 0 20px 0;
+        }
     }
 
     &__item {
         display:flex;
         flex-direction: column;
         width: 100%;
-        max-width: 438px;
         border: 1px solid $color-extra-light-gray;
         padding: 30px 40px;
         gap: 20px;
@@ -56,5 +59,12 @@
         font-size: 17px;
         line-height: 100%;
         color: $color-txt-black;
+    }
+
+    &__wrapper-swiper {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
     }
 }

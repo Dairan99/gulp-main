@@ -5,12 +5,15 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
+
+         @media (max-width: 768px) {
+            gap: 25px;
+        }
     }
 
     &__title {
         text-align: center;
         font-weight: 500;
-        font-size: 42px;
         line-height: 100%;
         color: $color-dark-blue;
     }
@@ -18,12 +21,16 @@
     &__list {
         display: flex;
         gap: 26px;
+
+        @media (max-width: 1100px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__item {
         display: flex;
         justify-content: space-between;
-        flex-shrink: 0;
         padding: 30px;
         background-color: $color-green;
         border-radius: 5px;
@@ -41,6 +48,10 @@
         font-size: 42px;
         line-height: 100%;
         color: $color-white;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
     }
 
     &__text {
@@ -50,6 +61,10 @@
         color: $color-white;
         width:100%;
         max-width: 104px;
+
+        @media (max-width: 768px) {
+            font-size: 17px;
+        }
     }
 
     &__button {

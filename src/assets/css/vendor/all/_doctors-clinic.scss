@@ -2,6 +2,10 @@
     background-color: $color-gray;
     display: block;
 
+    @media (max-width: 768px) {
+            background-color: transparent;
+        }
+
     &__list {
         display: flex;
         gap: 26px;
@@ -98,5 +102,23 @@
         gap: 40px;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 768px) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__wrapper-flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__all-doctor {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            max-width: 141px;
+        }
     }
 }

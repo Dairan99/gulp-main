@@ -2,6 +2,10 @@
     display: block;
     background-color: $color-gray;
 
+    @media (max-width: 768px) {
+            background-color: transparent;
+        }
+
     &__title {
         margin: 0 0 50px;
     }
