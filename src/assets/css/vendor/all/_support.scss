@@ -8,6 +8,10 @@
 
     &__title {
         margin: 0 0 50px 0;
+
+        @media (max-width: 768px) {
+            margin: 0 0 20px 0;
+        }
     }
 
     &__text-form {
@@ -26,12 +30,17 @@
         color: $color-dark-gray;
         text-align: center;
         margin: 0 0 50px 0;
+
+        @media (max-width: 768px) {
+            margin: 0 0 20px 0;
+        }
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 20px 26px;
+        justify-content: center;
     }
 
     &__item {
@@ -56,6 +65,10 @@
         display: flex;
         gap: 26px;
         margin: 0 0 10px 0;
+
+        @media (max-width: 768px) {
+            display: contents;
+        }
     }
 
     &__select {
@@ -85,6 +98,11 @@
         border: 1px solid $color-extra-light-gray;
         max-height: 58px;
         flex-shrink: 0;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+            margin: 0 0 20px 0;
+        }
     }
 
     &__button {
@@ -93,12 +111,30 @@
         padding: 17px;
         max-height: 58px;
         flex-shrink: 0;
+
+        @media (max-width: 768px) {
+            max-width: 195px;
+        }
+    }
+
+    &__wrapper-button {
+        display: flex;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__info-wrapper {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__text {

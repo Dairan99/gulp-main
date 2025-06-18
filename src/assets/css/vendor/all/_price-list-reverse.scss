@@ -3,7 +3,7 @@
 
     &__content {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     &__wrapper-acardion {
@@ -44,17 +44,11 @@
         padding: 16px 48px;
         background-color: $color-gray;
         border: 1px solid $color-light-gray;
-
+        text-align: left;
 
         @media (max-width: 768px) {
-            text-align: left;
             background-color: $color-very-green;
             color: $color-white;
-
-            
-
-        
-
 
             &::before {
                 position: absolute;
@@ -69,6 +63,7 @@
                 background-color: $color-white;
                 transition: all 0.3s ease;
             }
+
             &::after {
                 position: absolute;
                 top: 50%;
@@ -82,9 +77,6 @@
                 background-color: $color-white;
                 transition: all 0.3s ease;
             }
-
-        
-
 
             &.active {
                 &::after {
@@ -100,7 +92,6 @@
             top: 3px;
             left: -2px;
         }
-
     }
 
     &__column-btn {
@@ -114,7 +105,6 @@
             font-weight: 400;
             color: $color-orange;
             font-size: 17px;
-            padding: 0 0 0 20px;
         }
 
         @media (max-width: 360px) {
@@ -153,11 +143,9 @@
         @media (max-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            padding: 10px 0 10px 0;
             margin: 0;
             padding: 10px 0 0 10px;
             border: 1px solid $color-very-gray;
-
 
             &:nth-child(even) {
                 background-color: $color-white;
@@ -206,6 +194,7 @@
     &__cards {
         display: flex;
         gap: 26px;
+        margin: 0 0 80px 0;
 
         @media (max-width: 1000px) {
             border-radius: 30px;

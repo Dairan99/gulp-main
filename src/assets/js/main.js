@@ -391,6 +391,34 @@ document.addEventListener("DOMContentLoaded", function () {
     /*   end scrollTop  */
 
 
+    /*  btn more  */
+    const moreBtns = document.querySelectorAll('.btn-more');
+    moreBtns.forEach(moreBtn => {
+        if (moreBtn) {
+            const moreContent = moreBtn.previousElementSibling;
+            
+            if (moreContent.scrollHeight <= moreContent.clientHeight) {
+                moreBtn.style.display = 'none'; 
+            } else {
+                const textBtn = moreBtn.innerHTML; 
+                moreBtn.addEventListener('click', function() {
+                    const heightMoreContent = moreContent.style.maxHeight; 
+                    this.classList.toggle('active');
+                    
+                    if (moreContent.style.maxHeight) {
+                        moreContent.style.maxHeight = null;
+                        this.textContent = textBtn;
+                    } else {
+                        moreContent.style.maxHeight = moreContent.scrollHeight + "px"; 
+                        this.textContent = 'Свернуть';
+                    }
+                });
+            }
+        }
+    });
+    /*  end btn more  */
+
+
 
     /* navigation */
     const articleNavigation = document.querySelector(".navigation");

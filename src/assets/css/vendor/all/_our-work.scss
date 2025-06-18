@@ -1,0 +1,99 @@
+.our-work {
+    display: block;
+
+    &__list {
+        display: flex;
+        gap: 26px;
+        margin: 0 0 80px 0;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 322px;
+        border-radius: 20px;
+        box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.1);
+        padding: 40px 29px 30px;
+    }
+
+    &__card-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 0 20px 0;
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px 30px;
+        height: 56px;
+        background-color: $color-white;
+        color: $color-dark-gray;
+        line-height: 100%;
+        border: 1px solid $color-very-gray;
+
+        &::placeholder {
+            color: $color-dark-gray;
+        }
+    }
+
+    &__button {
+        padding: 18px;
+        color: $color-white;
+        border-radius: 5px;
+        background-color: $color-green;
+        width: 100%;
+    }
+
+    &__text {
+        display: block;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        color: $color-dark-gray;
+    }
+
+    &__text-link {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        color: $color-dark-blue;
+    }
+
+    &__number {
+        position: absolute;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        color: $color-orange;
+        background-color: $color-white;
+        padding: 11px 18px;
+        border-radius: 50%;
+        border: 1px solid $color-very-gray;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text-bold {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-txt-black;
+        margin-top: auto;
+        text-align: center;
+    }
+
+}

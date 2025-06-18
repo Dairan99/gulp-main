@@ -1,0 +1,45 @@
+.text-block {
+    & p {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+
+    & picture {
+        float: left;
+        margin: 10px;
+        width: 50%;
+        & img {
+            width: 100%;
+            max-height: 400px;
+            min-height: 300px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .text-block {
+    & p {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+
+    & picture {
+        float: none;
+        margin: 10px 0;
+        width: 100%;
+        & img {
+            width: 100%;
+            max-height: 400px;
+            min-height: 283px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+}
+}
