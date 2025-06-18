@@ -3,7 +3,7 @@
 
     &__content {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     &__wrapper-acardion {
@@ -194,6 +194,7 @@
     &__cards {
         display: flex;
         gap: 26px;
+        margin: 0 0 80px 0;
 
         @media (max-width: 1000px) {
             border-radius: 30px;

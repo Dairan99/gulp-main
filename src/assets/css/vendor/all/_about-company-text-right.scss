@@ -1,4 +1,4 @@
-.about-company {
+.about-company-text {
     display: block;
 
     &__content {
@@ -11,8 +11,9 @@
         line-height: 48px;
         color: $color-dark-blue;
         margin: 0 0 50px 0;
+        text-align: left;
 
-         @media (max-width: 768px) {
+        @media (max-width: 768px) {
             line-height: 100%;
             margin: 0 0 30px 0;
         }
@@ -23,6 +24,8 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 50px;
+        flex-direction: row-reverse;
+        margin: 0 0 16px 0;
 
         @media (max-width: 1000px) {
             gap: 30px;
@@ -32,10 +35,15 @@
         }
     }
 
+    &__item {
+        width: 100%;
+        max-height: 400px;
+    }
+
     &__wrapper-swiper {
         max-width: 46%;
 
-         @media (max-width: 1000px) {
+        @media (max-width: 1000px) {
             max-width: 68%;
         }
 
@@ -47,20 +55,20 @@
     &__wrapper-text {
         display: flex;
         flex-direction: column;
-        margin: 0 0 20px 0;
+        width: 100%;
+        max-width: 670px;
     }
 
     &__img {
         transition: all 0.3s ease;
 
         &:hover {
-            .about-company__wrapper-svg {
+            .about-company-text__wrapper-svg {
                 opacity: 1;
             }
         }
 
-        @media (max-width: 1000px) {
-        }
+        @media (max-width: 1000px) {}
     }
 
     &__img-office {
@@ -72,8 +80,8 @@
     }
 
     &__item {
-         &:hover {
-            .about-company__wrapper-svg {
+        &:hover {
+            .about-company-text__wrapper-svg {
                 opacity: 1;
             }
         }
@@ -111,18 +119,14 @@
         }
     }
 
-    &__bottom-title {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 100%;
-        color: $color-dark-blue;
-        margin: 0 0 30px 0;
-    }
-
     &__text {
         font-weight: 400;
-        font-size: 19px;
+        font-size: 17px;
         line-height: 100%;
+    }
+
+    &__bottom {
+        margin: 0 0 30px 0;
     }
 
     &__text-bottom {
@@ -130,5 +134,29 @@
         font-size: 19px;
         line-height: 100%;
         margin: 0 0 10px 0;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 213px;
+        padding: 18px 20px 18px 30px;
+        border: 1px solid $color-very-gray;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    &__button-text {
+        color: $color-txt-black;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    &__retractable-wrapper {
+        max-height: 700px;
+        overflow: hidden;
+        margin: 0 0 30px 0;
     }
 }

@@ -1,0 +1,93 @@
+<section class="intro-recording section-offset">
+    <div class="container">
+        <div class="intro-recording__swiper">
+                <div class="intro-recording__wrapper">
+                    <div class="intro-recording__left">
+                        <p class="intro-recording__title">Лечение алкоголизма</p>
+                        <div class="intro-recording__left-wrapper">
+                            <ul class="intro-recording__list">
+                                <li class="intro-recording__item">
+                                    <span class="intro-recording__ellipse">
+                                        <svg class="intro-recording__icons" width="11" height="9" viewBox="0 0 11 9"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.33331 4.5L4.08331 7.25L9.58331 1.75" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Работаем круглосуточно
+                                </li>
+                                <li class="intro-recording__item">
+                                    <span class="intro-recording__ellipse">
+                                        <svg class="intro-recording__icons" width="11" height="9" viewBox="0 0 11 9"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.33331 4.5L4.08331 7.25L9.58331 1.75" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Гарантия качества
+                                </li>
+                                <li class="intro-recording__item">
+                                    <span class="intro-recording__ellipse">
+                                        <svg class="intro-recording__icons" width="11" height="9" viewBox="0 0 11 9"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.33331 4.5L4.08331 7.25L9.58331 1.75" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Лицензированная клиника
+                                </li>
+                                <li class="intro-recording__item">
+                                    <span class="intro-recording__ellipse">
+                                        <svg class="intro-recording__icons" width="11" height="9" viewBox="0 0 11 9"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.33331 4.5L4.08331 7.25L9.58331 1.75" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Анонимно
+                                </li>
+                            </ul>
+                            <div class="intro-recording__buttons">
+                                <button class="intro-recording__button btn-text-green" type="button">
+                                    <span class="intro-recording__discount-number">3400</span>
+                                    <span class="intro-recording__discount-text">руб</span>
+                                    3200
+                                    <span class="intro-recording__text">руб.</span>
+                                </button>
+                                <button class="intro-recording__button btn-orange" type="button">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="intro-recording__card-right">
+                        <form class="intro-recording__card-form">
+                            <p class="intro-recording__card-title">Бесплатная консультация нарколога</p>
+                            <input name='catalogue' type='hidden' value='<?= $current_catalogue["Catalogue_ID"] ?>' />
+                            <input name="BitrixID" type="hidden" value='<?= $current_catalogue["BitrixID"] ?>'>
+                            <input name='city' type='hidden' value='<?= $current_catalogue["Catalogue_Name"] ?>' />
+                            <input name='type' type='hidden' value='request' />
+                            <input name='cc' type='hidden' value='2' />
+                            <input name='sub' type='hidden' value='8' />
+                            <input name='mes' type='hidden' value='22' />
+                            <input name="urlMessage" type="hidden" value="">
+                            <input name="title_url_message" type="hidden" value="">
+
+                            <div class="intro-recording__custom-input">
+                                <input class="input intro-recording__input" type="text" name="params[name][]"
+                                    placeholder="Ваше имя" required>
+                            </div>
+
+                            <div class="intro-recording__custom-input">
+                                <input class="input intro-recording__input" type="tel" name="params[phone][]"
+                                    placeholder="Ваш телефон" required>
+                            </div>
+
+                            <button class=" intro-recording__button-card popup-btn" data-path="popup-change"
+                                type="submit"><span>Оставить заявку</span></button>
+                        </form>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</section>
