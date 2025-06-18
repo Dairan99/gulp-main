@@ -1,0 +1,36 @@
+<section class="quality-service-bottom">
+    <div class="container">
+        <div class="quality-service-bottom__content">
+           
+            <div class="quality-service-bottom__card-bottom">
+                <form class="quality-service-bottom__card-form">
+
+                    <input name='catalogue' type='hidden' value='<?= $current_catalogue["Catalogue_ID"] ?>' />
+                    <input name="BitrixID" type="hidden" value='<?= $current_catalogue["BitrixID"] ?>'>
+                    <input name='city' type='hidden' value='<?= $current_catalogue["Catalogue_Name"] ?>' />
+                    <input name='type' type='hidden' value='request' />
+                    <input name='cc' type='hidden' value='2' />
+                    <input name='sub' type='hidden' value='8' />
+                    <input name='mes' type='hidden' value='22' />
+                    <input name="urlMessage" type="hidden" value="">
+                    <input name="title_url_message" type="hidden" value="">
+
+                    <p class="quality-service-bottom__card-title title-h1">Уговорим на лечение!</p>
+                    <p class="quality-service-bottom__card-text">Оставьте заявку и получите бесплатную консультацию нарколога.</p>
+                    <div class="quality-service-bottom__custom-input">
+                        <input class="input quality-service-bottom__input" type="text" name="params[name][]" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="quality-service-bottom__custom-input">
+                        <input class="input quality-service-bottom__input" type="tel" name="params[phone][]" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="quality-service-bottom__button-wrapper">
+                        <button class="quality-service-bottom__button-orange popup-btn" data-path="popup-change"
+                            type="submit"><span>Оставить заявку</span></button>
+                    </div>
+                </form>
+                <p class="quality-service-bottom__text-copyright">Нажимая кнопку “Оставить заявку”, вы соглашаетесь с политикой
+                    конфиденциальности</p>
+            </div>
+        </div>
+    </div>
+</section>
