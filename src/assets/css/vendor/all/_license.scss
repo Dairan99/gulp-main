@@ -1,6 +1,5 @@
 .license {
     display: block;
-    background-color: $color-gray;
 
     @media (max-width: 768px) {
             background-color: transparent;
@@ -54,4 +53,6 @@
         justify-content: center;
         align-items: center;
     }
+
+    
 }

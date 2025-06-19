@@ -70,6 +70,7 @@ body {
 
 .section-offset-gray {
     padding: 0 0 80px 0;
+    background-color: $color-gray;
 
     @media (max-width: 768px) {
         display: none;

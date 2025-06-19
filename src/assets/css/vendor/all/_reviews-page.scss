@@ -1,0 +1,144 @@
+.reviews-page {
+    display: block;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0 0 50px 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        gap: 26px;
+        flex-wrap: wrap;
+
+        @media (max-width: 1100px) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid $color-extra-light-gray;
+        padding: 30px 40px;
+        max-width: calc(100% / 3 - 20px);
+        gap: 20px;
+        border-radius: 5px;
+
+        @media (max-width: 1023px) {
+            max-width: calc(50% - 20px);
+        }
+
+        @media (max-width: 768px) {
+            max-width: calc(100% - 20px);
+        }
+    }
+
+    &__list-star {
+        display: flex;
+        gap: 6px;
+    }
+
+    &__wrapper-name {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-dark-blue;
+    }
+
+    &__time {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-dark-gray;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-txt-black;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid $color-support-txt-gray;
+    }
+
+    &__wrapper-swiper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__item-bottom {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 74px;
+        height: 74px;
+        border-radius: 50%;
+    }
+
+    &__doctors-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__wrapper-speciality {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        @media (max-width: 460px) {
+            flex-direction: column;
+        }
+    }
+
+    &__speciality {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-breadcrumbs;
+    }
+
+    &__direction {
+        font-family: "Manrope", "Arial", "sans-serif";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        padding: 6px 20px;
+        background-color: $color-very-green;
+        color: $color-white;
+        border-radius: 44px;
+
+        @media (max-width: 768px) {
+            padding: 6px 14px;
+        }
+
+        @media (max-width: 420px) {
+            font-size: 8px;
+        }
+    }
+
+    &__name {
+        font-family: "Manrope", "Arial", "sans-serif";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+    }
+}

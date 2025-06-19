@@ -1,0 +1,144 @@
+.vacancies {
+    display: block;
+
+    &__title {
+        margin: 0 0 50px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        gap: 40px;
+        padding: 0 0 40px 0;
+        margin: 0 0 40px 0;
+        border-bottom: 1px solid $color-gray-extra;
+    }
+
+    &__wrapper-global {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__space {
+        position: relative;
+        width: 100%;
+        max-width: 120px;
+        height: 120px;
+        padding: 29px;
+        border-radius: 5px;
+        background-color: $color-very-green;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title-name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        margin: 0 0 10px 0;
+    }
+
+    &__salary {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-txt-black;
+        margin: 0 0 20px 0;
+    }
+
+    &__experience {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 100%;
+        color: $color-dark-gray;
+        margin: 0 0 30px 0;
+    }
+
+    &__name-list {
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-txt-black;
+        margin: 0 0 20px 0;
+    }
+
+    &__list-work {
+        & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0 0 30px 0;
+
+            & li {
+                gap: 10px;
+                display: flex;
+                align-items: baseline;
+
+                &::before {
+                    display: block;
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    background-color: $color-dark-blue;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    margin: 0 0 0 20px;
+                }
+            }
+        }
+    }
+
+    &__bottom-wrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__button {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        padding: 14px 24px;
+        color: $color-white;
+        background-color: $color-orange;
+        border-radius: 5px;
+    }
+
+    &__iner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bottom-wrapper {
+        align-items: center;
+    }
+
+    &__tel {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-txt-black;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-orange;
+    }
+}

@@ -67,6 +67,10 @@
         border-radius: 5px;
         background-color: $color-green;
         width: 100%;
+
+        @media (max-width: 768px) {
+            background-color: $color-orange;
+        }
     }
 
     &__text {
