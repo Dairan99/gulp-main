@@ -6,10 +6,38 @@
         margin-bottom: 20px;
     }
 
+    & h1 {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        text-align: left;
+        margin: 0 0 30px 0;
+    }
+
+    & h2 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        text-align: left;
+        margin: 0 0 30px 0;
+    }
+
+    & h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-dark-blue;
+        text-align: left;
+    }
+    
+
     & picture {
         float: left;
         margin: 10px;
         width: 50%;
+
         & img {
             width: 100%;
             max-height: 400px;
@@ -22,24 +50,25 @@
 
 @media (max-width: 768px) {
     .text-block {
-    & p {
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 120%;
-        margin-bottom: 20px;
-    }
+        & p {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
 
-    & picture {
-        float: none;
-        margin: 10px 0;
-        width: 100%;
-        & img {
+        & picture {
+            float: none;
+            margin: 10px 0;
             width: 100%;
-            max-height: 400px;
-            min-height: 283px;
-            object-fit: cover;
-            border-radius: 30px;
+
+            & img {
+                width: 100%;
+                max-height: 400px;
+                min-height: 283px;
+                object-fit: cover;
+                border-radius: 30px;
+            }
         }
     }
-}
 }

@@ -10,6 +10,31 @@
         flex-direction: column;
     }
 
+    &__accordion {
+        display: contents;
+        pointer-events: none;
+        @media (max-width: 768px) {
+            display: flex;
+            gap: 40px;
+            pointer-events: all;
+        }
+    }
+
+    &__wrapper-content {
+        display: contents;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__wrapper-accordion {
+         @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 40px 0;
+        }
+    }
+
     &__item {
         display: flex;
         gap: 40px;
@@ -31,6 +56,12 @@
         padding: 29px;
         border-radius: 5px;
         background-color: $color-very-green;
+
+        @media (max-width: 768px) {
+            max-width: 40px;
+            height: 40px;
+        }
+        
     }
 
     &__icon {
@@ -38,11 +69,17 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media (max-width: 768px) {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &__name {
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
     }
 
     &__title-name {
@@ -107,6 +144,11 @@
     &__bottom-wrapper {
         display: flex;
         gap: 20px;
+        flex-wrap: wrap;
+
+        @media (max-width: 1023px) {
+            justify-content: center;
+        }
     }
 
     &__button {
@@ -141,4 +183,21 @@
         line-height: 100%;
         color: $color-orange;
     }
+
+    &__button-arrow {
+        display: none;
+        position: relative;
+        width:100%;
+        max-width: 56px;
+        height: 56px;
+        border-radius: 5px;
+        border: 1px solid $color-extra-light-gray;
+        background-color: $color-white;
+
+         @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    
 }

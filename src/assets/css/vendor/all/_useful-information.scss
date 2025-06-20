@@ -9,6 +9,15 @@
         margin: 0 0 50px 0;
     }
 
+    &__title-arcticle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: $color-txt-black;
+        margin: 0 0 30px 0;
+        margin-right: auto;
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -18,7 +27,7 @@
         border: 1px solid $color-light-gray;
         transition: all 0.3s ease;
         margin: 0 0 40px 0;
-        
+
         &:hover {
             border: 1px solid $color-orange;
             box-shadow: 0px 20px 60px 0px #0000001A;
@@ -31,7 +40,7 @@
     }
 
     &__wrapper {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -49,7 +58,7 @@
     }
 
     &__icon {
-        width:100%;
+        width: 100%;
         max-width: 12px;
         height: 16px;
         color: $color-txt-black;
@@ -104,7 +113,7 @@
     &__link {
         display: flex;
         gap: 15px;
-        width:100%;
+        width: 100%;
         max-width: 188px;
         padding: 18px 30px;
 

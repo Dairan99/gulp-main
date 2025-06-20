@@ -48,11 +48,13 @@
                     </span>
                 </div>
                 <div class="header__top-wrapper-right-table">
-                    <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="30" height="4" rx="2" fill="#EF8459" />
-                        <rect y="9" width="30" height="4" rx="2" fill="#EF8459" />
-                        <rect y="18" width="30" height="4" rx="2" fill="#EF8459" />
-                    </svg>
+                    <button class="burger__menu">
+                        <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="4" rx="2" fill="#EF8459" />
+                            <rect y="9" width="30" height="4" rx="2" fill="#EF8459" />
+                            <rect y="18" width="30" height="4" rx="2" fill="#EF8459" />
+                        </svg>
+                    </button>
                 </div>
                 <div class="header__top-wrapper-left">
                     <span class="header__top-text">Анонимная запись</span>
@@ -158,37 +160,41 @@
                     вопрос</button>
             </div>
         </div>
-        <nav class="header__bottom-nav">
+        <nav class="header__bottom-nav header__menu">
             <div class="header__bottom">
                 <ul class="header__bottom-list">
                     <li class="header__bottom-item">
                         <a class="header__bottom-link" href="#">О клинике</a>
-                        <svg class="header__bottom-link-icon" width="16" height="9" viewBox="0 0 16 9" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.45251 8.27487L15.09 1.30863C15.2008 1.19239 15.2626 1.03796 15.2626 0.877376C15.2626 0.716788 15.2008 0.562363 15.09 0.446128L15.0825 0.438626C15.0288 0.382082 14.9641 0.337058 14.8925 0.306291C14.8208 0.275523 14.7436 0.259658 14.6656 0.259658C14.5876 0.259658 14.5105 0.275523 14.4388 0.306291C14.3671 0.337058 14.3025 0.382082 14.2488 0.438626L7.99876 6.99862L1.75127 0.438625C1.69755 0.382081 1.63289 0.337057 1.56122 0.306289C1.48956 0.275522 1.41238 0.259657 1.33439 0.259657C1.2564 0.259657 1.17922 0.275522 1.10756 0.306289C1.03589 0.337057 0.971232 0.382081 0.917516 0.438625L0.910014 0.446127C0.799208 0.562361 0.737395 0.716787 0.737395 0.877375C0.737395 1.03796 0.799208 1.19239 0.910014 1.30862L7.54751 8.27487C7.60589 8.33614 7.67609 8.38491 7.75387 8.41824C7.83165 8.45157 7.91539 8.46875 8.00001 8.46875C8.08464 8.46875 8.16838 8.45157 8.24616 8.41824C8.32394 8.38491 8.39414 8.33614 8.45251 8.27487Z"
-                                fill="currentColor" />
-                        </svg>
-                        <ul class="header__bottom-drop-down-list">
-                            <li class="header__bottom-drop-down-item">
-                                <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
-                            </li>
-                            <li class="header__bottom-drop-down-item">
-                                <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
-                            </li>
-                            <li class="header__bottom-drop-down-item">
-                                <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
-                            </li>
-                            <li class="header__bottom-drop-down-item">
-                                <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
-                            </li>
-                            <li class="header__bottom-drop-down-item">
-                                <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
-                            </li>
-                            <li class="header__bottom-drop-down-item">
-                                <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
-                            </li>
-                        </ul>
+                        <div class="header__menu-accordion accordion">
+                            <svg class="header__bottom-link-icon" width="16" height="9" viewBox="0 0 16 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.45251 8.27487L15.09 1.30863C15.2008 1.19239 15.2626 1.03796 15.2626 0.877376C15.2626 0.716788 15.2008 0.562363 15.09 0.446128L15.0825 0.438626C15.0288 0.382082 14.9641 0.337058 14.8925 0.306291C14.8208 0.275523 14.7436 0.259658 14.6656 0.259658C14.5876 0.259658 14.5105 0.275523 14.4388 0.306291C14.3671 0.337058 14.3025 0.382082 14.2488 0.438626L7.99876 6.99862L1.75127 0.438625C1.69755 0.382081 1.63289 0.337057 1.56122 0.306289C1.48956 0.275522 1.41238 0.259657 1.33439 0.259657C1.2564 0.259657 1.17922 0.275522 1.10756 0.306289C1.03589 0.337057 0.971232 0.382081 0.917516 0.438625L0.910014 0.446127C0.799208 0.562361 0.737395 0.716787 0.737395 0.877375C0.737395 1.03796 0.799208 1.19239 0.910014 1.30862L7.54751 8.27487C7.60589 8.33614 7.67609 8.38491 7.75387 8.41824C7.83165 8.45157 7.91539 8.46875 8.00001 8.46875C8.08464 8.46875 8.16838 8.45157 8.24616 8.41824C8.32394 8.38491 8.39414 8.33614 8.45251 8.27487Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <div class="header__menu-accordion-content accordion__content">
+                            <ul class="header__bottom-drop-down-list">
+                                <li class="header__bottom-drop-down-item">
+                                    <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
+                                </li>
+                                <li class="header__bottom-drop-down-item">
+                                    <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
+                                </li>
+                                <li class="header__bottom-drop-down-item">
+                                    <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
+                                </li>
+                                <li class="header__bottom-drop-down-item">
+                                    <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
+                                </li>
+                                <li class="header__bottom-drop-down-item">
+                                    <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
+                                </li>
+                                <li class="header__bottom-drop-down-item">
+                                    <a class="header__bottom-drop-down-link" href="#">Наши услуги</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header__bottom-item">
                         <a class="header__bottom-link" href="#">Наши услуги</a>
@@ -238,6 +244,9 @@
                         <a class="header__bottom-link" href="#">Контакты</a>
                     </li>
                 </ul>
+
+                                <button class="header__middle-right-btn btn-green popup-btn" data-path="popup-change">Задать
+                    вопрос</button>
             </div>
         </nav>
     </div>
