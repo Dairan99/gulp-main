@@ -127,6 +127,34 @@ const modernNarcologySwiper = new Swiper(".modernNarcologySwiper", {
     },
 });
 
+const doctorSwiper = new Swiper(".doctorSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".doctor__swiper-button-next",
+        prevEl: ".doctor__swiper-button-prev",
+    },
+    pagination: {
+        el: ".doctor__swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 26,
+        },
+        850: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        600: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    },
+});
+
 
 const reviewsSwiper = new Swiper(".reviewsSwiper", {
     slidesPerView: 1,

@@ -32,16 +32,21 @@ if (scrollTop)
     });
 
 
-    
+
 ['load', 'resize'].forEach((event) => {
     window.addEventListener(event, function () {
+
+        const header = document.querySelector('header');
+        if (!header)
+            return;
+
         let headerHeight = header.clientHeight;
         const headerTop = header.querySelector('.header__top');
         if (headerTop) {
             var originalHeightHeaderTop = headerTop.offsetHeight;
             window.onscroll = function (e) {
                 if (window.scrollY > headerHeight) {
-                    if(window.innerWidth > 1260) {
+                    if (window.innerWidth > 1260) {
                         headerTop.classList.add('hide');
                         headerTop.style.height = '0px';
                     }
@@ -156,9 +161,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 if (currentPopup.getAttribute('data-target') == 'popup-jobs') {
-                    let currentItems = el.closest('.jobs__items') 
+                    let currentItems = el.closest('.jobs__items')
                     let originalText = currentPopup.querySelector('.jobs__inner_original');
-                    if(originalText && currentItems.querySelector('.jobs__inner')) {
+                    if (originalText && currentItems.querySelector('.jobs__inner')) {
                         originalText.innerHTML = currentItems.querySelector('.jobs__inner').innerHTML;
                     }
                 }
@@ -193,20 +198,20 @@ document.addEventListener("DOMContentLoaded", function () {
             initMap();
         }
     }
-    
+
     function initMap() {
         const mapPlaceholder = document.getElementById('map-placeholder');
         if (mapPlaceholder) {
             mapPlaceholder.remove();
         }
-    
+
         ymaps.ready(function () {
             const myMap = new ymaps.Map('map', {
                 center: [47.231129, 39.728721],
                 zoom: 13,
                 controls: []
             });
-    
+
             const myPlacemark = new ymaps.Placemark(
                 [47.231129, 39.728721],
                 {
@@ -220,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     //iconImageOffset: [-15, -31],
                 }
             );
-    
+
             myMap.geoObjects.add(myPlacemark);
             myMap.behaviors.disable(['scrollZoom']);
         });
@@ -229,117 +234,120 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /*  search */
-	const inputSearch = document.querySelectorAll('input[type=search]')
-	if (inputSearch.length > 0) {
-		inputSearch.forEach(elem => {
-			const wrapper = elem.closest('.search-wrapper')
-			if (wrapper) {
-				const searchResultBlock = wrapper.querySelector('.popup__search-result')
-				const popularCitiesBlock = wrapper.querySelector('.popup__search')
-				const noResultsMessage = searchResultBlock.querySelector('.no-results-message')
-				const noResultsMessageMob = searchResultBlock.querySelector('.no-results-message-mob')
-				const resultsMessage = searchResultBlock.querySelector('.results-message')
+    const inputSearch = document.querySelectorAll('input[type=search]')
+    if (inputSearch.length > 0) {
+        inputSearch.forEach(elem => {
+            const wrapper = elem.closest('.search-wrapper')
+            if (wrapper) {
+                const searchResultBlock = wrapper.querySelector('.popup__search-result')
+                const popularCitiesBlock = wrapper.querySelector('.popup__search')
+                const noResultsMessage = searchResultBlock.querySelector('.no-results-message')
+                const noResultsMessageMob = searchResultBlock.querySelector('.no-results-message-mob')
+                const resultsMessage = searchResultBlock.querySelector('.results-message')
 
-				function search() {
-					let filter = elem.value.toUpperCase()
-					let ul = wrapper.querySelectorAll('.search-list')
-					let totalResults = 0
+                function search() {
+                    let filter = elem.value.toUpperCase()
+                    let ul = wrapper.querySelectorAll('.search-list')
+                    let totalResults = 0
 
-					ul.forEach(item => {
-						let li = item.getElementsByTagName('li')
-						for (let i = 0; i < li.length; i++) {
-							let a = li[i].querySelector('.search-name')
-							if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-								li[i].classList.remove('none')
-								totalResults++
-							} else {
-								li[i].classList.add('none')
-							}
-						}
-					})
-                    if(noResultsMessage) {
+                    ul.forEach(item => {
+                        let li = item.getElementsByTagName('li')
+                        for (let i = 0; i < li.length; i++) {
+                            let a = li[i].querySelector('.search-name')
+                            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                li[i].classList.remove('none')
+                                totalResults++
+                            } else {
+                                li[i].classList.add('none')
+                            }
+                        }
+                    })
+                    if (noResultsMessage) {
                         noResultsMessage.classList.toggle('none', totalResults > 0);
                     }
                     if (noResultsMessageMob) {
                         noResultsMessageMob.classList.toggle('none', totalResults > 0);
                     }
-                    if(resultsMessage) {
+                    if (resultsMessage) {
                         resultsMessage.classList.toggle('none', totalResults == 0);
                     }
 
-					if (elem.value.trim() === '') {
-						searchResultBlock.classList.add('none')
-						popularCitiesBlock.classList.remove('none')
-					} else {
-						searchResultBlock.classList.remove('none')
-						popularCitiesBlock.classList.add('none')
-					}
-				}
-				elem.addEventListener('input', search)
+                    if (elem.value.trim() === '') {
+                        searchResultBlock.classList.add('none')
+                        popularCitiesBlock.classList.remove('none')
+                    } else {
+                        searchResultBlock.classList.remove('none')
+                        popularCitiesBlock.classList.add('none')
+                    }
+                }
+                elem.addEventListener('input', search)
 
                 document.addEventListener('click', (event) => {
                     if (!wrapper.contains(event.target)) {
                         searchResultBlock.classList.add('none')
                     }
                 })
-			}
-		})
-	}
-    /*  end search  */  
+            }
+        })
+    }
+    /*  end search  */
 
     /*  accordion  */
-	const acc = document.getElementsByClassName('accordion')
-	for (let i = 0; i < acc.length; i++) {
-        if(acc[i]) {
+    const acc = document.getElementsByClassName('accordion')
+    for (let i = 0; i < acc.length; i++) {
+        if (acc[i]) {
             acc[i].addEventListener('click', function () {
-                const accContent = this.querySelector('.accordion__content')  || this.parentElement.querySelector('.accordion__content') 
+                const accContent = this.querySelector('.accordion__content') || this.parentElement.querySelector('.accordion__content')
                 if (accContent.classList.contains('accordion__content--active')) {
                     accContent.classList.remove('accordion__content--active');
                     this.classList.remove('accordion--active');
-                    accContent.style.maxHeight = '0'; 
+                    accContent.style.maxHeight = '0';
                 } else {
                     accContent.classList.add('accordion__content--active');
                     this.classList.add('accordion--active');
-    
+
                     const contentHeight = accContent.scrollHeight;
                     accContent.style.maxHeight = `${contentHeight}px`;
                 }
             })
         }
-	}
-	/*  end accordion   */
+    }
+    /*  end accordion   */
 
 
     /*  tab  */
-	const showTab = elTabBtn => {
-		const elTab = elTabBtn.closest('.tab');
-		if (elTabBtn.classList.contains('active')) {
-			return;
-		}
-		const targetId = elTabBtn.dataset.id;
-		const elTabPanes = elTab.querySelectorAll(`.tab-content[data-id="${targetId}"]`);
+    const showTab = elTabBtn => {
+        const elTab = elTabBtn.closest('.tab');
+        if (!elTab) { 
+            return;
+        }
+        if (elTabBtn.classList.contains('active')) {
+            return;
+        }
+        const targetId = elTabBtn.dataset.id;
+        const elTabPanes = elTab.querySelectorAll(`.tab-content[data-id="${targetId}"]`);
 
-		const elTabBtnActive = elTab.querySelector('.active');
-		if (elTabBtnActive) {
-			elTabBtnActive.classList.remove('active');
-		}
+        const elTabBtnActive = elTab.querySelector('.active');
+        if (elTabBtnActive) {
+            elTabBtnActive.classList.remove('active');
+        }
 
-		const elTabPaneShow = elTab.querySelectorAll('.active');
-		elTabPaneShow.forEach(pane => pane.classList.remove('active'));
+        const elTabPaneShow = elTab.querySelectorAll('.active');
+        elTabPaneShow.forEach(pane => pane.classList.remove('active'));
 
-		elTabBtn.classList.add('active');
-		elTabPanes.forEach(pane => pane.classList.add('active'));
-	};
+        elTabBtn.classList.add('active');
+        elTabPanes.forEach(pane => pane.classList.add('active'));
+    };
 
     const tabButtons = document.querySelectorAll('.tab-btn')
-	tabButtons.forEach(btn => {
-        if(btn) {
+    tabButtons.forEach(btn => {
+        if (btn) {
             btn.addEventListener('click', function (e) {
                 showTab(this);
-            });            
+            });
         }
-	});
-	/*  end tab */
+    });
+    /*  end tab */
 
     /* new tabs */
     const tabs = document.querySelectorAll('.tabs');
@@ -354,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (tabBtns.length > 0) {
             for (let i = 0; i < tabBtns.length; i++) {
-                tabBtns[i].addEventListener('click', ()=> {
+                tabBtns[i].addEventListener('click', () => {
                     if (!tabBtns[i].classList.contains('active')) {
                         tabContents.forEach(elem => {
                             elem.classList.remove('active');
@@ -377,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /*   scrollTop  */
-	const buttonsUp = document.querySelectorAll('.is-scroll-up')
+    const buttonsUp = document.querySelectorAll('.is-scroll-up')
     buttonsUp.forEach(buttonUp => {
         if (buttonUp) {
             buttonUp.addEventListener('click', function () {
@@ -396,20 +404,20 @@ document.addEventListener("DOMContentLoaded", function () {
     moreBtns.forEach(moreBtn => {
         if (moreBtn) {
             const moreContent = moreBtn.previousElementSibling;
-            
+
             if (moreContent.scrollHeight <= moreContent.clientHeight) {
-                moreBtn.style.display = 'none'; 
+                moreBtn.style.display = 'none';
             } else {
-                const textBtn = moreBtn.innerHTML; 
-                moreBtn.addEventListener('click', function() {
-                    const heightMoreContent = moreContent.style.maxHeight; 
+                const textBtn = moreBtn.innerHTML;
+                moreBtn.addEventListener('click', function () {
+                    const heightMoreContent = moreContent.style.maxHeight;
                     this.classList.toggle('active');
-                    
+
                     if (moreContent.style.maxHeight) {
                         moreContent.style.maxHeight = null;
                         this.textContent = textBtn;
                     } else {
-                        moreContent.style.maxHeight = moreContent.scrollHeight + "px"; 
+                        moreContent.style.maxHeight = moreContent.scrollHeight + "px";
                         this.textContent = 'Свернуть';
                     }
                 });
@@ -426,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const jsScrollBlockList = document.querySelectorAll(
             ".text-block h1, .text-block h2, .text-block h3, .text-block h4, .text-block h5"
         );
-    
+
         if (jsScrollBlockList.length > 0) {
             for (let i = 0; i < jsScrollBlockList.length; i += 1) {
                 const jsScrollBlock = jsScrollBlockList[i];
@@ -435,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.querySelector(".navigation__list");
                 const articleNavigationItem = document.createElement("li");
                 const articleNavigationLink = document.createElement("a");
-    
+
                 articleNavigationLink.classList.add("navigation__link");
                 jsScrollBlock.setAttribute("id", `${i}`);
                 articleNavigationLink.setAttribute("href", `$${i}`);
@@ -458,7 +466,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
         } else {
-            if(articleNavigation.querySelector(".navigation")) {
+            if (articleNavigation.querySelector(".navigation")) {
                 articleNavigation.querySelector(".navigation").remove();
             }
         }

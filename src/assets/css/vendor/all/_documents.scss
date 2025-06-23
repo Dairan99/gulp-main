@@ -1,38 +1,43 @@
-.license {
+.documents {
     display: block;
 
-    @media (max-width: 768px) {
-            background-color: transparent;
-        }
-
     &__title {
-        margin: 0 0 50px;
+        margin: 0 0 50px 0;
+
+        @media (max-width: 768px) {
+            margin: 0 0 30px 0;
+        }
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        position: relative;
         border-radius: 5px;
         background-color: $color-white;
         border: 1px solid transparent;
         transition: all 0.3s ease;
-        
+
         &:hover {
             border: 1px solid $color-orange;
 
-            .license__button {
+            .documents__button {
                 opacity: 1;
             }
         }
     }
 
-    &__img-doc {
-        height: 100%;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
-    &__wrapper {
-        margin: 0 0 40px 0;
+    &__img-documents {
+        width:100%;
+        max-width: 299px;
+        max-height: 462px;
+        height: 100%;
     }
 
     &__button {
@@ -50,13 +55,4 @@
         transition: all 0.3s ease;
         pointer-events: none;
     }
-
-    &__wrapper-swiper {
-        display: flex;
-        gap: 40px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
 }
