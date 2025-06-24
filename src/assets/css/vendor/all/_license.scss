@@ -9,9 +9,20 @@
         margin: 0 0 50px;
     }
 
+    &__wrapper-list {
+        flex-wrap: wrap;
+        gap: 26px;
+
+        @media (max-width: 1023px) {
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
+        max-width: 322px;
         width: 100%;
         border-radius: 5px;
         background-color: $color-white;
@@ -58,5 +69,27 @@
         align-items: center;
     }
 
-    
+    &__swiper-button-prev {
+        display: none;
+
+        @media (max-width: 1023px) {
+            display: block;
+        }
+    }
+
+     &__swiper-button-next {
+        display: none;
+
+        @media (max-width: 1023px) {
+            display: block;
+        }
+    }
+
+    &__swiper-pagination {
+        display: none;
+
+        @media (max-width: 1023px) {
+            display: block;
+        }
+    }
 }

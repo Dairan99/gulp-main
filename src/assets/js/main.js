@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /*  tab  */
     const showTab = elTabBtn => {
         const elTab = elTabBtn.closest('.tab');
-        if (!elTab) { 
+        if (!elTab) {
             return;
         }
         if (elTabBtn.classList.contains('active')) {
@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /*   scrollTop  */
-    const buttonsUp = document.querySelectorAll('.is-scroll-up')
+    const buttonsUp = document.querySelectorAll('.scroll-up')
     buttonsUp.forEach(buttonUp => {
         if (buttonUp) {
             buttonUp.addEventListener('click', function () {
@@ -397,6 +397,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     /*   end scrollTop  */
+
+    /*   scrollTop-2  */
+
+    const scrollToTopBtn = document.querySelector('.is-scroll-up');
+    function toggleScrollButton() {
+        const scrollPosition = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        if (scrollPosition > viewportHeight) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    
+    window.addEventListener('scroll', toggleScrollButton);
+    window.addEventListener('load', toggleScrollButton);
+
+    /*   end scrollTop-2  */
 
 
     /*  btn more  */

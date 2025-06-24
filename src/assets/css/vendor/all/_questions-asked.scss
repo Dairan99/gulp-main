@@ -41,6 +41,18 @@
 
     }
 
+    &__list {
+        display: flex;
+        gap: 26px;
+
+        @media (max-width: 1400px) {
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     &__item.accordion--active {
         font-weight: 500;
         font-size: 20px;

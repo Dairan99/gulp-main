@@ -1,6 +1,137 @@
 
 /* Swipers */
 
+//new swiper
+
+document.addEventListener('DOMContentLoaded', function() {
+    const licenseSwiper = document.querySelector('.licenseSwiper');
+    const licenseItems = document.querySelectorAll('.license__item');
+    let swiperInstance = null;
+
+    function initLicenseSwiper() {
+        if (window.innerWidth < 1024) {
+            // Активация слайдера
+            if (!swiperInstance) {
+                swiperInstance = new Swiper('.licenseSwiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.license__swiper-button-next',
+                        prevEl: '.license__swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.license__swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        650: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        850: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 26
+                        }
+                    }
+                });
+            }
+        } else {
+            // Деактивация слайдера
+            if (swiperInstance) {
+                swiperInstance.destroy(true, true);
+                swiperInstance = null;
+            }
+            // Возвращаем нормальное состояние
+            licenseItems.forEach(item => {
+                item.style.width = '';
+                item.style.marginRight = '';
+            });
+        }
+    }
+
+    // Инициализация при загрузке
+    initLicenseSwiper();
+
+    // Оптимизация ресайза
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(initLicenseSwiper, 150);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const doctorsClinicAllItems = document.querySelectorAll('.doctors-clinic-all__item');
+    let swiperInstance = null;
+
+    function initLicenseSwiper() {
+        if (window.innerWidth < 1024) {
+
+            // Активация слайдера
+            if (!swiperInstance) {
+                swiperInstance = new Swiper('.doctorsClinicAll', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.doctors-clinic-all__swiper-button-next',
+                        prevEl: '.doctors-clinic-all__swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.doctors-clinic-all__swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        450: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        650: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        850: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 26
+                        }
+                    }
+                });
+            }
+        } else {
+
+            // Деактивация слайдера
+            if (swiperInstance) {
+                swiperInstance.destroy(true, true);
+                swiperInstance = null;
+            }
+            // Возвращаем нормальное состояние
+            doctorsClinicAllItems.forEach(item => {
+                item.style.width = '';
+                item.style.marginRight = '';
+            });
+        }
+    }
+
+    // Инициализация при загрузке
+    initLicenseSwiper();
+
+    // Оптимизация ресайза
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(initLicenseSwiper, 150);
+    });
+});
+
+//new swiper
+
 // about
 const aboutSwiper = new Swiper(".aboutSwiper", {
     slidesPerView: 1,
@@ -212,33 +343,33 @@ const usefulInformationSwiper = new Swiper(".usefulInformationSwiper", {
     },
 });
 
-const licensySwiper = new Swiper(".licenseSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".license__swiper-button-next",
-        prevEl: ".license__swiper-button-prev",
-    },
-    pagination: {
-        el: ".license__swiper-pagination",
-        clickable: true,
-    },
+// const licensySwiper = new Swiper(".licenseSwiper", {
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//     navigation: {
+//         nextEl: ".license__swiper-button-next",
+//         prevEl: ".license__swiper-button-prev",
+//     },
+//     pagination: {
+//         el: ".license__swiper-pagination",
+//         clickable: true,
+//     },
 
-    breakpoints: {
-        1100: {
-            slidesPerView: 4,
-            spaceBetween: 26,
-        },
-        850: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-    },
-});
+//     breakpoints: {
+//         1100: {
+//             slidesPerView: 4,
+//             spaceBetween: 26,
+//         },
+//         850: {
+//             slidesPerView: 3,
+//             spaceBetween: 20,
+//         },
+//         600: {
+//             slidesPerView: 2,
+//             spaceBetween: 20,
+//         },
+//     },
+// });
 
 
 
